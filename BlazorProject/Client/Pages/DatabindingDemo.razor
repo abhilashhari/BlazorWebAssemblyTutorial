@@ -7,8 +7,15 @@
     <b>@Name : </b>
 </div>
 
+<h3>Two way binding</h3>
+<textarea @bind="Description" @bind:event="oninput"></textarea>
+
+<div>
+    Count: @Description.Length
+</div>
+
 @code {
 
-
+    public string Description { get; set; } = string.Empty;
 
 }
